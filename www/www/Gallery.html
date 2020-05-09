@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+    <!-- fotorama 설정 추가(CDN 사용) -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        iframe {
+            padding-top: 15px;
+            border: none;
+        }
+        
+        /*video css*/
+        .vid-container {
+            position: relative;
+            padding-bottom: 52%;
+            padding-top: 30px; 
+            height: 0; 
+        }
+
+        .vid-container iframe,
+        .vid-container object,
+        .vid-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .vid-list-container {
+            width: 92%;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-left: 4%;
+            padding-bottom: 20px;
+        }
+
+        .vid-list {
+            width: 1344px;
+            position: relative;
+            top:0;
+            left: 0;
+        }
+
+        .vid-item {
+            display: block;
+            width: 148px;
+            height: 148px;
+            float: left;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .thumb {
+            overflow:hidden;
+            height: 84px;
+        }
+
+        .thumb img {
+            width: 100%;
+            position: relative;
+            top: -13px;
+        }         
+
+        .vid-item .desc {
+            color: #21A1D2;
+            font-size: 15px;
+            margin-top:5px;
+        }
+
+        .arrows {
+            position:relative;
+            width: 100%;
+        }
+
+        .arrow-left {
+            color: #fff;
+            font-size: 15px;
+            position: absolute;
+            background: #777;
+            padding: 15px;
+            left: -25px;
+            top: -130px;
+            z-index: 99;
+            cursor: pointer;
+        }
+
+        .arrow-right {
+            color: #fff;
+            font-size: 15px;
+            position: absolute;
+            background: #777;
+            padding: 15px;
+            right: -25px;
+            top: -130px;
+            z-index:100;
+            cursor: pointer;
+        }
+
+        @media (max-width: 624px) {
+            .arrows {
+                position: relative;
+                margin: 0 auto;
+                widows: 85px;
+            }
+            .arrow-left {
+                left: 0;
+                top: -20px;
+                font-size: 3vw;
+            }
+
+            .arrow-right {
+                right: 0;
+                top: -20px;
+                font-size: 3vw;
+            }
+            .vid-item .desc {
+            font-size: 3vw;
+            }
+        }
+    </style>
+
+    <script>
+        $thumbnail.on('click', function(e){
+            e.preventDefault();
+            src = src+'&autoplay=1'; // src: the original URL for embedding 
+            $videoContainer.empty().append( $iframe.clone().attr({'src': src}) ); // $iframe: the original iframe for embedding
+        });
+    </script>
+
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header" data-position="fixed" data-theme="b">      
+            <a href="index.html" rel="external" data-icon="home" data-direction="reverse" class="ui-btn-left">Home</a>
+            <h1>Gallery</h1>     
+        </div>
+
+        <div data-role="content"> 
+            <div data-role="tabs">
+                <div data-role="navbar">
+                    <ul>
+                    <li><a href="#Images" data-ajax="false" class="ui-btn-active">Images</a></li>
+                    <li><a href="#Videos" data-ajax="false">Videos</a></li>
+                    </ul>
+                </div>
+                <div id="Images" class="ui-body-d ui-content">
+                    <div class="fotorama" data-arrows="true" data-width="100%" data-ratio="640/480" data-nav="thumbs" >
+                        <img src="images/Gallery0.jpg"/>
+                        <img src="images/Gallery1.jpg"/>
+                        <img src="images/Gallery2.jpg"/>
+                        <img src="images/Gallery3.jpg"/>
+                        <img src="images/Gallery4.jpg"/>
+                        <img src="images/Gallery5.jpg"/>
+                        <img src="images/Gallery6.jpg"/>
+                    </div><!-- fotorama 끝 -->
+                </div>
+
+                <div id="Videos">
+                    <div class="vid-container">
+                        <iframe id="vid_frame" width="560" height="315" src="https://www.youtube.com/embed/Pjt1B2A3vFI?autoplay=1&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                
+                    <div class="vid-list-container">
+                        <div class="vid-list">
+                            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/Pjt1B2A3vFI?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb"><img src="http://img.youtube.com/vi/Pjt1B2A3vFI/0.jpg"></div>
+                                <div class="desc">보헤미안 랩소디(Bohemian Rhapsody)-Queen (COVER)</div>
+                            </div>
+                            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/jl-IwW6ZRzc?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb"><img src="http://img.youtube.com/vi/jl-IwW6ZRzc/0.jpg"></div>
+                                <div class="desc">Someone Like You-Adele (COVER)</div>
+                            </div>
+                            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/dpiIHfb4Fyk?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb"><img src="http://img.youtube.com/vi/dpiIHfb4Fyk/0.jpg"></div>
+                                <div class="desc">Reality-Richard Sanderson (COVER)</div>
+                            </div>
+                            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/fyzSGbkMSU8?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb"><img src="http://img.youtube.com/vi/fyzSGbkMSU8/0.jpg"></div>
+                                <div class="desc">그게 더 슬프잖아요(길을 걷다보면 - 이문세)-잔나비ver. </div>
+                            </div>
+                            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/CS1GSo256bQ?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb"><img src="http://img.youtube.com/vi/CS1GSo256bQ/0.jpg"></div>
+                                <div class="desc">작전명 청춘-잔나비 (미공개곡)</div>
+                            </div>
+                            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/RvsivXvMJ3g?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb"><img src="http://img.youtube.com/vi/RvsivXvMJ3g/0.jpg"></div>
+                                <div class="desc">60's-잔나비 (미공개신곡)</div>
+                            </div>
+                            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/ZUDyFWgmWv8?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb"><img src="http://img.youtube.com/vi/ZUDyFWgmWv8/0.jpg"></div>
+                                <div class="desc">The Blower's Daughter-Damien Rice (COVER)</div>
+                            </div>
+                            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/g5oReKRA8-U?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                                <div class="thumb"><img src="http://img.youtube.com/vi/g5oReKRA8-U/0.jpg"></div>
+                                <div class="desc">All You Need Is Love -잔나비ver.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arrows">
+                        <div class="arrow-left"><i class="fa fa-chevron-left fa-lg"></i></div>
+                        <div class="arrow-right"><i class="fa fa-chevron-right fa-lg"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        $(document).ready(function () {
+            $(".arrow-right").bind("click", function (event) {
+                event.preventDefault();
+                $(".vid-list-container").stop().animate({
+                    scrollLeft: "+=336"
+                }, 750);
+            });
+            $(".arrow-left").bind("click", function (event) {
+                event.preventDefault();
+                $(".vid-list-container").stop().animate({
+                    scrollLeft: "-=336"
+                }, 750);
+            });
+        });
+        </script>
+    </div>
+    
+</body>
+</html> 

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Group Sound Jannabi</title>
+
+     <!--Jquery Mobile 설정-->
+     <!-- JQuery Mobile을 사용하기 위해 필요한 태그-->
+     <link rel="stylesheet" href="themes/Jannabi.min.css" />
+     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+     <script src="jquery.min.js"></script>
+     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+     <!--sidenavbar-->
+     <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.8);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 15px;
+        }
+        
+        .sidenav a {
+            padding: 8px 40px 8px 8px;
+            text-decoration: none;
+            font-size: 25px;
+            display:block;
+            float: right;
+            clear: right;
+            transition: 0.3s;
+        }
+        
+       .sidenav .closebtn {
+            padding: 8px 40px 8px 8px;
+            text-decoration: none;
+            font-size: 36px;
+            display:block;
+            background-size: 100%;
+            float: right;
+            clear: right;
+            transition: 0.3s;
+        }
+        
+        /*@media screen and (max-height: 300px) {
+            .sidenav {padding-top: 25px;}
+            .sidenav a {font-size: 18px;}
+        }*/
+
+        @media (max-width: 300px){
+            .sidenav {padding-top: 25px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        #bg-img{
+            background: url(images/main_1.jpg);
+            min-height: 600px;
+            min-width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: static;
+        }
+
+        .container{
+            position: fixed;
+            top:0;
+            right:0;
+            margin-right: 25px;
+            width: auto;
+        }
+
+        </style>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>    
+
+    </head>
+<body>
+    <div data-role="page" id="main">
+        <div id="bg-img">
+            <div class="container">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="About.html" rel="external">About</a>
+                    <a href="Albums.html" rel="external">Albums</a>
+                    <a href="Gallery.html" rel="external">Gallery</a>
+                    <a href="Schedule.html" rel="external">Schedule</a>
+                </div>
+            </div>
+            <p style="float:right;margin-right:30px;font-size:30px;cursor:pointer;color:gray" onclick="openNav()">&#9776; OPEN</p>
+        </div>
+        </div>
+    </div><!-- main page 끝-->
+    <script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

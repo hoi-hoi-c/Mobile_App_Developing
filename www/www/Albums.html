@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Albums</title>
+
+    <!-- JQuery Mobile을 사용하기 위해 필요한 태그-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+     
+
+     <style>
+                
+        /*.artist_info{
+            padding-top: 30px;
+        }*/
+
+
+        dt {
+            font-size: 12px;
+            color: rgb(165, 161, 161);
+        }
+        
+        .ui-listview li{
+            padding-left: 10px;
+        }
+        
+
+     </style>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header" class="bg-img" data-theme="b" data-position="fixed">
+        <a href="index.html" rel="external" data-icon="home" data-direction="reverse" class="ui-btn-left">Home</a>
+            <div class="bg-img"></div>
+            <h1>Albums</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="collapsible-set">
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+                        <h4>
+                            <span style="float:left; width: 20%;"><img width="100" height="100" src="https://cdnimg.melon.co.kr/cm/album/images/022/53/703/2253703_500.jpg/melon/resize/260/quality/80/optimize" alt=""></span>
+                            <span style="float:right; width: 60%;">
+                                <div class="artist_info">
+                                    <dl>
+                                        <dt>
+                                            <dt>[싱글]</dt>
+                                            <strong>로켓트</strong>
+                                            <dt>2014.04.28 | 1곡</dt>
+                                        </dt>
+                                    </dl>
+                                    
+                            </div>
+                            </span>
+                        </h4>
+                        <ol data-role="listview">
+                            <li>로켓트</li>
+                        </ul>
+                    </div>
+
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+                        <h4>
+                            <span style="float:left; width: 20%;"><img width="100" height="100" src="https://cdnimg.melon.co.kr/cm/album/images/022/78/294/2278294_500.jpg?5ba55ff6c6870d99d8d599d85d14cd7f/melon/resize/260/quality/80/optimize" alt=""></span>
+                            <span style="float:right; width: 60%;">
+                                <div class="artist_info">
+                                    <dl>
+                                        <dt>
+                                            <dt>[싱글]</dt>
+                                            <strong>봉춤을 추네</strong>
+                                            <dt>2014.08.28 | 2곡</dt>
+                                        </dt>
+                                    </dl>
+                                    
+                            </div>
+                            </span>
+                        </h4>
+                        <ol data-role="listview">
+                            <li>봉춤을 추네</li>
+                            <li>사랑하긴 했었나요 스쳐가는 인연이었나요 짧지 않은 우리 함께 했던 시간들이 자꾸 내 마음을 가둬두네</li>
+                        </ul>
+                    </div>
+
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+                        <h4>
+                            <span style="float:left; width: 20%;"><img width="100" height="100" src="https://cdnimg.melon.co.kr/cm/album/images/022/88/004/2288004_500.jpg?cc797261ea09423bf5e13747dccb4b0e/melon/resize/260/quality/80/optimize" alt=""></span>
+                            <span style="float:right; width: 60%;">
+                                <div class="artist_info">
+                                    <dl>
+                                        <dt>
+                                            <dt>[싱글]</dt>
+                                            <strong>November Rain</strong>
+                                            <dt>2014.10.29 | 2곡</dt>
+                                        </dt>
+                                    </dl>
+                                    
+                            </div>
+                            </span>
+                        </h4>
+                        <ol data-role="listview">
+                            <li>November Rain</li>
+                            <li>November Rain (Inst.)</li>
+                        </ul>
+                    </div>
+
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+                        <h4>
+                            <span style="float:left; width: 20%;"><img width="100" height="100" src="https://cdnimg.melon.co.kr/cm/album/images/022/95/395/2295395_500.jpg?f39f8723d1e1126e863656a800b29297/melon/resize/260/quality/80/optimize" alt=""></span>
+                            <span style="float:right; width: 60%;">
+                                <div class="artist_info">
+                                    <dl>
+                                        <dt>
+                                            <dt>[EP]</dt>
+                                            <strong>See Your Eyes</strong>
+                                            <dt>2014.12.16 | 7곡</dt>
+                                        </dt>
+                                    </dl>
+                                    
+                            </div>
+                            </span>
+                        </h4>
+                        <ol data-role="listview">
+                            <li>Baby Maybe</li>
+                            <li>See Your Eyes</li>
+                            <li>너 같아</li>
+                            <li>November Rain</li>
+                            <li>누구나 겨울이 오면(With 이기림)</li>
+                            <li>달</li>
+                            <li>See Your Eyes (Acoustic Ver.)</li>
+                        </ul>
+                    </div>
+
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+                        <h4>
+                            <span style="float:left; width: 20%;"><img width="100" height="100" src="https://cdnimg.melon.co.kr/cm/album/images/027/02/242/2702242_500.jpg/melon/resize/260/quality/80/optimize" alt=""></span>
+                            <span style="float:right; width: 60%;">
+                                <div class="artist_info">
+                                    <dl>
+                                        <dt>
+                                            <dt>[정규]</dt>
+                                            <strong>MONKEY HOTEL</strong>
+                                            <dt>2016.08.04 | 10곡</dt>
+                                        </dt>
+                                    </dl>
+                                    
+                            </div>
+                            </span>
+                        </h4>
+                        <ol data-role="listview">
+                            <li>Goodnight (Intro)</li>
+                            <li>뜨거운 여름밤은 가고 남은 건 볼품없지만</li>
+                            <li>Surprise!</li>
+                            <li>Wish</li>
+                            <li>The Secret Of Hard Rock</li>
+                            <li>HONG KONG</li>
+                            <li>꿈나라 별나라</li>
+                            <li>JUNGLE</li>
+                            <li>MONKEY HOTEL (Finale)</li>
+                            <li>왕눈이 왈츠 (Bonus Track)</li>
+                        </ul>
+                    </div>
+                
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+                        <h4>
+                            <span style="float:left; width: 20%;"><img width="100" height="100" src="https://cdnimg.melon.co.kr/cm/album/images/100/93/774/10093774_500.jpg?649104333a56369e139e1486e97fbade/melon/resize/260/quality/80/optimize" alt=""></span>
+                            <span style="float:right; width: 60%;">
+                                <div class="artist_info">
+                                    <dl>
+                                        <dt>
+                                            <dt>[싱글]</dt>
+                                            <strong>She</strong>
+                                            <dt>2017.09.09 | 1곡</dt>
+                                        </dt>
+                                    </dl>
+                                    
+                            </div>
+                            </span>
+                        </h4>
+                        <ol data-role="listview">
+                            <li>She</li>
+                        </ul>
+                    </div>
+
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+                        <h4>
+                            <span style="float:left; width: 20%;"><img width="100" height="100" src="https://cdnimg.melon.co.kr/cm/album/images/101/94/042/10194042_500.jpg?0944e0fef6a1d5fefd7869ec8cd4344f/melon/resize/260/quality/80/optimize"  alt=""></span>
+                            <span style="float:right; width: 60%;">
+                                <div class="artist_info">
+                                    <dl>
+                                        <dt>
+                                            <dt>[싱글]</dt>
+                                            <strong>Good Boy Twist</strong>
+                                            <dt>2018.08.13 | 1곡</dt>
+                                        </dt>
+                                    </dl>
+                                    
+                            </div>
+                            </span>
+                        </h4>
+                        <ol data-role="listview">
+                            <li>Good Boy Twist</li>
+                        </ol>
+                    </div>
+            </div>
+        </div>       
+    </div>
+</body>
+</html>

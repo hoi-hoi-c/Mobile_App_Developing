@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.hanyang.Jannabi"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode는 Android only, 정수형, Google Play에 등록할 때, Version Code가 이전 버전보다 높으면 App Update -->
+
+  <name>Group Sound Jannabi</name>
+
+  <description>
+      An example for phonegap build docs.
+  </description>
+
+  <author href="https://build.phonegap.com" email="cjhhi100@gmail.com">
+      Junghoi
+  </author>
+
+  <preference name="phonegap-version" value='cli-7.0.1'/>
+  <preference name="pgb-builder-version" value='2'/>
+
+  <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
+  <access origin="*"/>
+
+  <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
+  <plugin name="cordova-plugin-splashscreen" spec="~4.1.0" />
+
+  <icon src="icon.png"/>
+  <splash src="splash.png"/>
+</widget>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+
+     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!--jQuery Modal-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <!--SNS logo button-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img{
+            max-width:100%;
+            height: auto;
+        }
+        
+        img.instrument{
+            width: 4vw;
+            height: auto;
+        }
+
+        .container{
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .container .overdescription{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            right: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background: rgba(0,0,0,0.5);
+            text-shadow: none;
+            color: white;
+        }
+
+        .container .overdescription p{
+            font-size: 2vw;
+        }
+
+        .container .overdescription_b{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            right: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background: rgba(0,0,0,0.5);
+            text-shadow: none;
+            color: white;
+        }
+        
+        .container .overdescription_b p{
+            font-size: 2vw;
+        }
+
+        .container .overdescription_b a{
+            font-size: 1.5vw;
+        }
+
+
+        p.selfie{
+            font-size:1.5vw;
+        }
+
+        .fa{
+            padding: 10px;
+            font-size: 25px;
+            width: 25px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%
+        }
+
+        .fa:hover{
+            opacity: 0.7;
+        }
+        
+        
+        .fa-instagram{
+            background: #f09433; 
+            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+            color: white;
+        }
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-youtube-play {
+            background: #bb0000;
+            color: white;
+        }
+
+        span{
+            font-weight:bold;
+            color:#f09433;
+        }
+    </style>
+
+</head>
+<body>
+    <div data-role=page>
+        <div data-role="header" data-theme="b" data-position="fixed">
+        <a href="index.html" rel="external" data-icon="home" data-direction="reverse" class="ui-btn-left" >Home</a>
+            <h1>About</h1>
+        </div>
+        <div data-role="content">
+            <div class="container">
+                <img src="images/5.jpg" width="100%">
+                <div class="overdescription">
+                    <h2 style="font-size: 5vw">그룹사운드 잔나비</h2>
+                    <P><span>Debut:</span> 2014년 디지털 싱글 앨범 [로켓트]</P>
+                    <P><span>Company:</span> 페포니 뮤직</P>
+                    <a href="http://www.instagram.com/bandjannabi/" class="fa fa-instagram" style="color:white"></a>
+                    <a href="http://www.facebook.com/BandJannabi" class="fa fa-facebook" style="color:white"></a>
+                    <a href="http://www.youtube.com/user/BandJannabi" class="fa fa-youtube-play" style="color:white"></a>
+                    <P><span>TMI 1:</span> 그룹 이름 잔나비는 멤버 모두가 92년생 원숭이띠이기 때문이다.</P>
+                    <P><span>TMI 2:</span> 2012년 최정훈, 김도형, 유영현 셋으로 시작했고 장경준과 윤결은 2015년 밴드 멤버가 되었다.</P>
+                    <p><span>TMI 3:</span> 가장 긴 노래 제목으로 '사랑하긴 했었나요 스쳐가는 인연이었나요 짧지 않은 우리 함께했던 시간들이 자꾸 내 마음을 가둬두네'가 있다.</p>
+                </div>
+            </div>
+            <table style="width:100%">
+                <tr>
+                    <th>
+                        <div class="container">
+                            <img src="images/s_YH.jpg">
+                            <div class="overdescription_b">
+                                <p class="selfie">유 영 현</p>
+                                <img class="instrument" src="images/piano.png"></br>
+                                <a href="#ex1" rel="modal:open">More</a>
+                                <p></p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="container">
+                            <img src="images/s_KJ.jpg">
+                            <div class="overdescription_b">
+                                <p class="selfie">장 경 준</p>
+                                <img class="instrument" src="images/bass.png"></br>
+                                <a href="#ex2" rel="modal:open">More</a>
+                                <p></p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="container">
+                            <img src="images/s_JH.jpg">
+                            <div class="overdescription_b">
+                                <p class="selfie">최 정 훈</p>
+                                <img class="instrument" src="images/vocal.png"></br>
+                                <a href="#ex3" rel="modal:open">More</a>
+                                <p></p>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="container">
+                            <img src="images/s_DH.jpg">
+                            <div class="overdescription_b">
+                                <p class="selfie">김 도 형</p>
+                                <img class="instrument" src="images/elec.png"></br>
+                                <a href="#ex4" rel="modal:open">More</a>
+                                <p></p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="container">
+                            <img src="images/s_YK.jpg">
+                            <div class="overdescription_b">
+                                <p class="selfie">윤  결</p>
+                                <img class="instrument" src="images/drum.png"></br>
+                                <a href="#ex5" rel="modal:open">More</a>
+                                <p></p>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="container">
+                            <img src="images/s_JJ.jpg">
+                            <div class="overdescription_b">
+                                <p class="selfie">최실장님</p>
+                                <img class="instrument" src="images/director.png"></br>
+                                <a href="#ex6" rel="modal:open">More</a>
+                                <p></p>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+            <div id="ex1" class="modal">
+                <h1>Keyboardist 유영현</h1>
+                <p>Birth: 1992.04.04</p>
+                <p>Nickname: 곤듀님</p>
+                <p>Feature: 검정뿔테, 금발머리(feat.이쯤이면 눈치껏 뿌리도 금발로 나올 때가 됐는데)</p>
+                <a href="http://www.instagram.com/jannabiyh/?hl=ko" class="fa fa-instagram"></a></br>
+                <a href="#" rel="modal:close">Close</a>
+            </div> 
+            <div id="ex2" class="modal">
+                <h1>Bassist 장경준</h1>
+                <p>Birth: 1992.10.12</p>
+                <p>Nickname: 얌전한고양이(a.k.a.얌고), 브로콜리</p>
+                <p>Feature: 뽀글이 머리</p>
+                <a href="http://www.instagram.com/jannabikj/?hl=ko" class="fa fa-instagram"></a></br>
+                <a href="#" rel="modal:close">Close</a>
+            </div> 
+            <div id="ex3" class="modal">
+                <h1>Vocal 최정훈</h1>
+                <p>Birth: 1992.03.10</p>
+                <p>Nickname: 정춘, 단공 최정훈 선생</p>
+                <p>Feature: 아이돌 외모</p>
+                <a href="http://www.instagram.com/jannabijh/?hl=ko" class="fa fa-instagram"></a></br>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+            <div id="ex4" class="modal">
+                <h1>Guitarist 김도형</h1>
+                <p>Birth: 1992.04.17</p>
+                <p>Nickname: 김또롯또, 김또띠, 이름 별명이 수없이 많음</p>
+                <p>Feature: 빵모자 콜렉터</p>
+                <a href="http://www.instagram.com/jannabidh/?hl=ko" class="fa fa-instagram"></a></br>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+            <div id="ex5" class="modal">
+                <h1>Drummer 윤 결</h1>
+                <p>Birth: 1992.06.15</p>
+                <p>Nickname: 엉짱</p>
+                <p>Feature: 함양 출신, 먹부심</p>
+                <a href="http://www.instagram.com/jannabiyk/?hl=ko" class="fa fa-instagram"></a></br>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+            <div id="ex6" class="modal">
+                <h1>Director 최정준</h1>
+                <p>Birth: 199?.03.11</p>
+                <p>Nickname: 최실장님, 감자밭대주주, 페포니 사장님</p>
+                <p>Feature: 보컬 최정훈의 친형이자 잔나비 매니지먼트 디렉터, 잔식스의 여섯번째 멤버</p>
+                <a href="http://www.instagram.com/jun_peponi/?hl=ko" class="fa fa-instagram"></a></br>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
